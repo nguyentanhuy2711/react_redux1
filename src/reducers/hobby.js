@@ -21,6 +21,7 @@ const hobbyReducer = (state = initialState, action) => {
         }
         case 'SET_ACTIVE_HOBBY': {
             const newActiveId = action.payload.id;
+            console.log("aa", newActiveId);
             return {
                 ...state,
                 activeID: newActiveId,
