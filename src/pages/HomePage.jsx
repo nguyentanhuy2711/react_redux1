@@ -1,7 +1,7 @@
 import React from 'react';
 import { useDispatch, useSelector } from 'react-redux';
 import { addNewHobby } from '../actions/hobby';
-import { setAtiveHobby } from '../actions/hobby';
+import { setActiveHobby } from '../actions/hobby';
 import HobbyList from '../components/Home/HobbyList';
 
 HomePage.propTypes = {
@@ -14,7 +14,7 @@ const randomHobbyID = ()=>{
 
 function HomePage(props) {
     const hobbyList = useSelector(state => state.hobby.list);
-    const activeId = useSelector(state=> state.hobby.activeId);
+    const activeID = useSelector(state=> state.hobby.activeID);
     const dispatch  = useDispatch();
     console.log("hobbyList : ", hobbyList);
 
@@ -31,10 +31,10 @@ function HomePage(props) {
         dispatch(action);
     }
     const handleHobbyClick = (hobby) =>{
-        const action = setAtiveHobby(hobby) ;
+        const action = setActiveHobby(hobby) ;
         console.log("active in ", hobby);
         const liItem  = document.querySelector(".active");
-        console.log(liItem);
+        console.log("x:",liItem);
         dispatch(action);
 
     }
@@ -44,7 +44,7 @@ function HomePage(props) {
             <h1>Redux - react</h1>
            <HobbyList
             hobbyList = {hobbyList}
-            activeId = {activeId}
+            activeID = {activeID}
             onHobbyClick = {handleHobbyClick}
            ></HobbyList>
         </div>

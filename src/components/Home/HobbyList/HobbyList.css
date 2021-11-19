@@ -2,7 +2,8 @@ ul.hobby-list{
     background-color: #fff;
 }
 ul.hobby-list > li{
- transition: all .35s ease-in-out 0s;
+    cursor: pointer;
+    transition: all .35s ease-in-out 0s;
 }
 ul.hobby-list > li.active{
     color: deeppink;
