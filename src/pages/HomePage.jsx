@@ -16,7 +16,7 @@ function HomePage(props) {
     const hobbyList = useSelector(state => state.hobby.list);
     const activeId = useSelector(state=> state.hobby.activeId);
     const dispatch  = useDispatch();
-    console.log("hobbyList: ", hobbyList);
+    console.log("hobbyList : ", hobbyList);
 
     const handleAddHobbyList = ()=>{
             const newID = randomHobbyID();
